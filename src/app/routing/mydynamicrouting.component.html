@@ -1,0 +1,13 @@
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+    <div class="navbar-nav">
+        <span *ngFor="let route of appRoutes">
+            <a *ngIf="route.path !== '' && route.path !== '**' " class="nav-link" 
+            [routerLink]='route.path'>{{route.path}}</a>
+        </span>
+    </div>
+</nav>
+
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
+
