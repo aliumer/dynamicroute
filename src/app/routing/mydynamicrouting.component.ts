@@ -10,7 +10,7 @@ export class MyDynamicRoutingComponent implements OnInit {
     appRoutes: Routes;
     constructor(private _router: Router, private loginServices: LoginService) { }
     ngOnInit(): void {
-        let userid = 'pm@qa.com';
+        let userid = localStorage.getItem('userid');
         this.appRoutes = <Routes>this.loginServices.getRoutes(userid);
         RouterModule.forRoot(this.appRoutes);
     }

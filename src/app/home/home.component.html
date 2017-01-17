@@ -1,3 +1,8 @@
 <p>
-  home works!
+  home component!
 </p>
+<ul>  
+  <li *ngFor="let u of users">
+    <button class="btn btn-primary" style="width: 120px;" id="btnSimulate" value="u" (click)="simulatelogin(u)">{{u}}</button>
+  </li>
+</ul>
